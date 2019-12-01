@@ -263,3 +263,21 @@ footer .social a {
 footer .social a:hover {
     background-color: #0f0f0f;
 }
+
+
+/* Inner Pages */
+
+#sub-header {
+    height: 320px;
+    background-color: #fff;
+    display: block;
+    margin-top: 0px !important;
+    padding-top: 160px;
+    background-image: url('../img/default-inner-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sub-header h1 {
+    color: #fff;
+}

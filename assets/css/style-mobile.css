@@ -1,0 +1,43 @@
+@media only screen and (max-width: 576px) and (min-width: 250px) {
+    .navbar .navbar-toggler {
+        color: #fff !important;
+        background-color: #fff;
+        position: absolute;
+        right: 20px;
+    }
+    .navbar .menu {
+        float: left;
+        position: absolute;
+        top: 76px;
+        background-color: #000000ad;
+        left: 0;
+        right: 0;
+    }
+    .carousel.slide .carousel-item>img {
+        height: 320px !important;
+    }
+    .calender {
+        display: none;
+    }
+    .car-item {
+        max-height: 500px !important;
+        min-height: 364px;
+    }
+    .item-img {
+        float: none !important;
+        display: block;
+        width: 100%;
+    }
+    .item-content {
+        float: none !important;
+        width: 100% !important;
+    }
+    .item-img img.img-fluid {
+        max-width: 280px !important;
+        max-height: 100% !important;
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (min-width: 768px) {}

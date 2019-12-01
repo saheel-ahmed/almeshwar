@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style-mobile.css" />
     <title>Al Meshwar</title>
 </head>
 
@@ -31,25 +32,25 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Menu</a>
+                                <a class="nav-link" href="#resturantmenu">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Reservation</a>
+                                <a class="nav-link" href="#reservation">Reservation</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
+                                <a class="nav-link" href="about-us.html">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                                <a class="nav-link" href="blog.html">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Gallery</a>
+                                <a class="nav-link" href="gallery.html">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
+                                <a class="nav-link" href="contact.html">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -64,7 +65,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./assets/img/slider1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                         <img src="./assets/img/logo.png" alt="...">
                         <h2>Delicious Food</h2>
                         <p>Tomato is a delicious restaurant website template</p>
@@ -91,7 +92,7 @@
     </header>
 
     <!-- Reservation -->
-    <section class="my-4">
+    <section id="reservation" class="my-4">
         <div class="container">
 
             <div class="section-title">
@@ -143,7 +144,14 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Phone number</label>
-                                    <input type="text" class="form-control" placeholder="Enter your phone number" />
+                                    <input type="text" class="form-control" placeholder="Enter your phone number" required />
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Any special request</label>
+                                    <textarea class="form-control" placeholder="Enter if any special request"></textarea>
                                 </div>
                             </div>
 
@@ -457,9 +465,9 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Trusted By</h2>
+                <h2>Instagram</h2>
                 <p>
-                    These fine folks trusted the award winning restaurant
+                    We love posting photos of our coustomers having a good time
                 </p>
             </div>
 
@@ -561,14 +569,14 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <script src="./assets/js/jquery-3.4.1.min.js">
     </script>
     <!--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js">
     </script>
     <script src="./assets/js/owl.carousel.min.js"></script>
@@ -610,6 +618,20 @@
                 $(".owl-carousel").trigger('prev.owl.carousel', [300]);
             });
         });
+
+        const $navbar = $('.navbar');
+
+        $('a[href^="#"]').on('click', function(e) {
+            e.preventDefault();
+
+            const scrollTop =
+                $($(this).attr('href')).position().top -
+                $navbar.outerHeight();
+
+            $('html, body').animate({
+                scrollTop
+            });
+        })
     </script>
 </body>
 
